@@ -1,0 +1,281 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+
+/*---> Begin form here <---*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+    padding: 0 15px;
+}
+
+.container .logocontent {
+    margin: 10px;
+}
+
+.container .logocontent img {
+    width: 900px;
+}
+
+.section-block .menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #0a0ad8;
+}
+
+.section-block .menu .menu-bar {
+    display: flex;
+    width: 80%;
+    height: 40px;
+}
+
+:root {
+    --primary: #0a0ad8;
+    --secondary: #FD2868;
+    --tertiary: #fff;
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item {
+    background-color: var(--primary);
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: .7rem;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    transition: background-color 0.2s linear;
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item:hover {
+    background-color: var(--secondary);
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--tertiary);
+    top: 100%;
+    left: 0;
+    width: max-content;
+    text-align: center;
+    flex-direction: column;
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item:hover .dropdown-content {
+    display: block;
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item .dropdown-content a {
+    color: #000;
+    text-decoration: none;
+    padding: .7rem;
+    display: block;
+    text-align: left;
+    transition: 0.2s linear;
+}
+
+.section-block .menu .menu-bar .dropdown-menu-item .dropdown-content a:hover {
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    text-decoration: none;
+    padding: .7rem;
+    display: block;
+    text-align: left;
+}
+
+.section-block .banner {
+    display: block;
+    width: 100%;
+}
+
+.section-block .banner img {
+    width: 100%;
+}
+
+.block-hd {
+    width: 90%;
+    display: block;
+    margin: 30px auto;
+    padding: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.block-hd .h3-content {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #dc143c;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.block-hd .course-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.block-hd .course-content .course-details {
+    width: 22.7%;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.block-hd .course-content .course-details .course-dt {
+    width: 100%;
+}
+
+.block-hd .course-content .course-details .course-dt .course-hd {
+    width: 100%;
+    overflow: hidden;
+}
+
+.block-hd .course-content .course-details .course-dt .course-hd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body {
+    padding: 1rem;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .content {
+    padding: 1rem 0;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .content .title {
+    padding: 1rem;
+    height: 60px;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .content .title p {
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .content .sum {
+    display: block;
+    padding: 1rem;
+    height: 80px;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .submit {
+    padding: 1rem 0 0;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .submit button {
+    display: inline-flex;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    align-items: center;
+    vertical-align: bottom;
+    text-align: center;
+    color: #fff;
+    background: #2196f3;
+    border: 1px solid #2196f3;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.block-hd .course-content .course-details .course-dt .course-body .submit button:hover {
+    color: #ddd;
+    background: #0b69b7;
+    border: 1px solid #0b69b7;
+}
+
+.block-hd {
+    width: 90%;
+    display: block;
+}
+
+.block-hd .fcontent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.5rem -.5rem 0 -.5rem;
+    flex-direction: row;
+}
+
+.block-footer .fcontent .left {
+    width: 66%;
+    padding: 8px;
+}
+
+.footer-line {
+    color: #fff;
+    line-height: normal;
+    font-size: small;
+    margin: 0 0 1rem 0;
+}
+
+.block-footer .fcontent .left hr {
+    margin: 1rem;
+    background-color: currentColor;
+    opacity: .5;
+}
+
+.block-footer .fcontent .left .cont {
+    display: flex;
+    flex-direction: row;
+}
+
+.block-footer .fcontent .left .L {
+    margin: 8px;
+    width: 50%;
+}
+
+.block-footer .fcontent .left .R {
+    margin: 8px;
+    width: 50%;
+}

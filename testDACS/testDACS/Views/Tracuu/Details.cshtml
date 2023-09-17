@@ -1,0 +1,51 @@
+﻿@model testDACS.Models.BIENLAIHOCPHI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BIENLAIHOCPHI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HOCVIEN.TENHV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCVIEN.TENHV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOP.TENLOP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOP.TENLOP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MONHOC.TENMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.TENMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOCPHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCPHI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MABL }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

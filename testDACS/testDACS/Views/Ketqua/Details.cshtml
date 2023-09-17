@@ -1,0 +1,43 @@
+﻿@model testDACS.Models.Du_thi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Du_thi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HOCVIEN.TENHV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOCVIEN.TENHV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MONHOC.TENMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.TENMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KETQUA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KETQUA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

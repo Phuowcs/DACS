@@ -1,0 +1,51 @@
+﻿@model testDACS.Models.LOP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LOP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GIANGVIEN.TENGV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIANGVIEN.TENGV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHOAHOC.GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHOAHOC.GHICHU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THOIKHOABIEU.THU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THOIKHOABIEU.THU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENLOP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENLOP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MALOP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

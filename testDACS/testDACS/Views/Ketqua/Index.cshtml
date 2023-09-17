@@ -1,0 +1,97 @@
+﻿@model IEnumerable<testDACS.Models.Du_thi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="block-hd">
+    <div style="padding-bottom: 60px">
+        <h2>TRA CUU KET QUA THI</h2>
+        @Html.Partial("KetquaSearch")
+        @*<p>
+                @Html.ActionLink("Create New", "Create")
+            </p>*@
+    </div>
+    <div style="max-height:480px; overflow: overlay">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.HOCVIEN.TENHV)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MONHOC.TENMH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KETQUA)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HOCVIEN.TENHV)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MONHOC.TENMH)
+                    </td>
+                    @if (item.KETQUA != null) {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.KETQUA)
+                        </td>
+                    } else {
+                        <td>
+                            <span style="color: orangered">đang chờ kết quả</span>
+                        </td>
+                    }
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id1=item.MAHV, id2=item.MAMH }) |
+                        @Html.ActionLink("Details", "Details", new { id1=item.MAHV, id2=item.MAMH }) |
+                        @Html.ActionLink("Delete", "Delete", new { id1=item.MAHV, id2=item.MAMH })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</section>
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HOCVIEN.TENHV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MONHOC.TENMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KETQUA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOCVIEN.TENHV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MONHOC.TENMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KETQUA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>*@

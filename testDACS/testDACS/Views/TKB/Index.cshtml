@@ -1,0 +1,86 @@
+﻿@model IEnumerable<testDACS.Models.LOP>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<section class="block-hd">
+    <h2>THOI KHOA BIEU</h2>
+    <div style="max-height:480px; overflow: overlay">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MALOP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TENLOP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.CA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.THU)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.TIETBD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.SOTIET)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.TUNGAY)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.DENNGAY)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.THOIKHOABIEU.PHONG)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MALOP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TENLOP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.THOIKHOABIEU.CA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.THOIKHOABIEU.THU)
+                    </td>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.THOIKHOABIEU.TIETBD)
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.THOIKHOABIEU.SOTIET)
+                    </th>
+                    <th>
+                        @item.THOIKHOABIEU.TUNGAY.ToString("dd/MM/yyyy")
+                    </th>
+                    <th>
+                        @item.THOIKHOABIEU.DENNGAY.ToString("dd/MM/yyyy")
+                    </th>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.THOIKHOABIEU.PHONG)
+                    </th>
+                    @*<td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.MALOP }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.MALOP }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.MALOP })
+                        </td>*@
+                </tr>
+            }
+        </table>
+    </div>
+</section>

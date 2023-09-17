@@ -1,0 +1,14 @@
+﻿@using (Html.BeginForm("ChungnhanSearch", "Chungnhan", FormMethod.Get, new { @class = "navbar-form navbar-right" }))
+{
+    <div style="width:400px; display:flex; justify-content:space-around">
+        <div>
+            Nhập mã học viên
+            <input type="text" name="searchString" placeholder="vd: 2080600579" class="form-control" style="width: 220px; height: 44px; border-block-color: none" />
+        </div>
+        <div>
+            <button type="submit" style="border-radius: 5px; border: none; padding: 12px 15px; background: #2196f3; color: #fff;">
+                Tìm
+            </button>
+        </div>
+    </div>
+}

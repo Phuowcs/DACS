@@ -1,0 +1,86 @@
+﻿@model IEnumerable<testDACS.Models.CHUNGCHI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="block-hd">
+    <div style="padding-bottom: 60px">
+        <h2>TRA CUU CHUNG CHI</h2>
+        @Html.Partial("ChungnhanSearch")
+        @*<p>
+                @Html.ActionLink("Create New", "Create")
+            </p>*@
+    </div>
+    <div style="max-height:480px; overflow: overlay">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MACC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TENCC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Du_thi.MONHOC.TENMH)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MACC)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TENCC)
+                    </td>
+
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Du_thi.MONHOC.TENMH)
+                    </th>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MACC }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.MACC }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MACC })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</section>
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Du_thi.MAHV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TENCC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Du_thi.MAHV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENCC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MACC }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MACC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MACC })
+        </td>
+    </tr>
+}
+
+</table>*@

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+@*<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</div>*@
+    <div class="container">
+        <div class="logocontent">
+            <img src="~/Content/images/logocontent.png" alt="logo">
+        </div>
+    </div>
+    <section class="section-block">
+        <div class="menu">
+            <div class="menu-bar">
+                <div class="dropdown-menu-item">
+                    <a href="https://www.hutech.edu.vn/">TRANG CHỦ</a>
+                </div>
+                <div class="dropdown-menu-item">
+                    <a>THỜI KHOÁ BIỂU</a>
+                    <div class="dropdown-content">
+                        <a href='@Url.Action("TKB_1", "TKB")'>TIN HỌC</a>
+                        <a href='@Url.Action("TKB_2", "TKB")'>NGOẠI NGỮ</a>
+                        <a href='@Url.Action("TKB_3", "TKB")'>KỸ NĂNG</a>
+                    </div>
+                </div>
+                <div class="dropdown-menu-item">
+                    <a>ĐĂNG KÝ HỌC</a>
+                    <div class="dropdown-content">
+                        <a href="https://localhost:44381/#section-it">TIN HỌC</a>
+                        <a href="https://localhost:44381/#section-lang">NGOẠI NGỮ</a>
+                        <a href="https://localhost:44381/#section-skill">KỸ NĂNG</a>
+                    </div>
+                </div>
+                <div class="dropdown-menu-item">
+                    <a>TRA CỨU</a>
+                    <div class="dropdown-content">
+                        <a href='@Url.Action("Index", "Tracuu")'>THỜI KHOÁ BIỂU</a>
+                        <a href='@Url.Action("Index", "LichThi")'>LỊCH THI</a>
+                        <a href='@Url.Action("Index", "Ketqua")'>KẾT QUẢ THI</a>
+                        <a href='@Url.Action("Index", "Chungnhan")'>CHỨNG CHỈ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @RenderBody()
+    <section style="background-color: #0e63cd; padding: 20px; font-family: Arial, Helvetica, sans-serif;">
+        <div class="block-footer">
+            <div class="fcontent">
+                <div class="left">
+                    <p class="footer-line" style="text-align: center;">
+                        <strong>TRUNG TÂM TIN HỌC - NGOẠI NGỮ - KỸ NĂNG</strong>
+                    </p>
+                    <hr style="color: #fff;">
+                    <div class="cont">
+                        <div class="L">
+                            <p class="footer-line">Trụ sở: 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</p>
+                            <p class="footer-line">ĐT: (028) 3 512 4485 - Email: thnnkn@hutech.edu.vn</p>
+                        </div>
+                        <div class="R">
+                            <p class="footer-line">Khu Công nghệ cao TP.HCM (SHTP), Xa lộ Hà Nội, P.Hiệp Phú, TP.Thủ Đức, TP.HCM</p>
+                            <p class="footer-line">Hotline: 0287.108.7779</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

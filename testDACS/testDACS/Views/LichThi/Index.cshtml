@@ -1,0 +1,69 @@
+﻿@model IEnumerable<testDACS.Models.CT_Lich_thi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="block-hd">
+    <div style="padding-bottom: 60px">
+        <h2>TRA CUU LICH THI</h2>
+        @Html.Partial("LichthiSearch")
+        @*<p>
+                @Html.ActionLink("Create New", "Create")
+            </p>*@
+    </div>
+    <div style="max-height:480px; overflow: overlay">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.LOP.TENLOP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NGAYTHI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GIOBD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SOPHUT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PHONG)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GHICHU)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.LOP.TENLOP)
+                    </th>
+                    <th>
+                        @item.NGAYTHI.ToString("dd/MM/yyyy")
+                    </th>
+                    <th> 
+                        @item.GIOBD.ToString("hh:mm") 
+                    </th>
+                    <th> 
+                        @Html.DisplayFor(modelItem => item.SOPHUT)
+                    </th>
+                    <th> 
+                        @Html.DisplayFor(modelItem => item.PHONG)
+                    </th>
+                    <th> 
+                        @Html.DisplayFor(modelItem => item.GHICHU)
+                    </th>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id1=item.MALOP, id2=item.MALT }) |
+                        @Html.ActionLink("Details", "Details", new { id1=item.MALOP, id2=item.MALT }) |
+                        @Html.ActionLink("Delete", "Delete", new { id1=item.MALOP, id2=item.MALT })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</section>

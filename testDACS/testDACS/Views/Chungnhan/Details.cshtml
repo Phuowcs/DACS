@@ -1,0 +1,35 @@
+﻿@model testDACS.Models.CHUNGCHI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CHUNGCHI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Du_thi.MAHV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Du_thi.MAHV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENCC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MACC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

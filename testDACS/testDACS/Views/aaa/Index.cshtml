@@ -1,0 +1,67 @@
+﻿@model IEnumerable<testDACS.Models.BIENLAIHOCPHI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HOCVIEN.TENHV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP.TENLOP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MONHOC.TENMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOCPHI)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOCVIEN.TENHV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOP.TENLOP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MONHOC.TENMH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOCPHI)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MABL }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MABL }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MABL })
+            </td>
+        </tr>
+    }
+    @*@{
+        var db = new testDACS.Models.testDACScontext();
+        var kq = db.BIENLAIHOCPHIs.GroupBy(p => p.MONHOC, p => p.LOP, (key, g) => new {MONHOC = key, cBL = g.ToList()});
+        foreach(var item in kq)
+        {
+            <tr>
+                <td>
+                    @item.MONHOC.MAMH
+                </td>
+                <td>
+                    @item.MONHOC.BIENLAIHOCPHIs
+                </td>
+            </tr>
+        }
+}*@
+    </table>
